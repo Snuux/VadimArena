@@ -153,10 +153,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _winCondition: 1
-  _defeatCondition: 0
+  _defeatCondition: 1
   _targetTimeUntilDeath: 999
-  _targetDeadEnemiesCount: 30
-  _targetSpawnedEnemiesCount: 30
+  _targetDeadEnemiesCount: 999
+  _targetSpawnedEnemiesCount: 999
 --- !u!4 &136918984
 Transform:
   m_ObjectHideFlags: 0
