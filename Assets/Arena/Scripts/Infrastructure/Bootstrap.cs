@@ -12,11 +12,11 @@ namespace Arena.Scripts.Infrastructure
     {
         [SerializeField] private WinConditions _winCondition;
         [SerializeField] private DefeatConditions _defeatCondition;
-        
+
         [SerializeField] private float _targetTimeUntilDeath;
         [SerializeField] private int _targetDeadEnemiesCount;
         [SerializeField] private int _targetSpawnedEnemiesCount;
-        
+
         private ControllersUpdateService _controllersUpdateService;
         private GameCycle.GameCycle _gameCycle;
         private EnemiesCountHandler _enemiesCountHandler;
@@ -24,7 +24,9 @@ namespace Arena.Scripts.Infrastructure
         private EnemySpawnerHandler _enemySpawnerHandler;
         private BulletFactory _heroBulletFactory;
         private Hero _hero;
-        
+
+        private bool _gameCycleEnded;
+
         private void Awake()
         {
             StartCoroutine(StartProcess());
@@ -34,26 +36,27 @@ namespace Arena.Scripts.Infrastructure
         {
             _controllersUpdateService = new ControllersUpdateService();
             _enemiesCountHandler = new EnemiesCountHandler();
-            
+
             HeroConfig heroConfig = Resources.Load<HeroConfig>("Configs/HeroConfig");
             EnemyConfig enemyConfig = Resources.Load<EnemyConfig>("Configs/EnemyConfig");
-            
+
             ControllersFactory controllersFactory = new ControllersFactory();
             AllObjectsFactory allObjectsFactory = new AllObjectsFactory();
 
             _heroBulletFactory = new BulletFactory();
 
             HeroFactory heroFactory = new HeroFactory(_controllersUpdateService, controllersFactory, allObjectsFactory);
-            EnemyFactory enemyFactory = new EnemyFactory(_controllersUpdateService, controllersFactory, allObjectsFactory, _enemiesCountHandler);
+            EnemyFactory enemyFactory = new EnemyFactory(_controllersUpdateService, controllersFactory,
+                allObjectsFactory, _enemiesCountHandler);
 
             _enemySpawnerHandler = new EnemySpawnerHandler(enemyFactory);
 
-            _spawnEnemiesInSpawnPointsHandler = 
+            _spawnEnemiesInSpawnPointsHandler =
                 new SpawnEnemiesInSpawnPointsHandler(this, _enemySpawnerHandler);
 
             _hero = heroFactory.CreateDice(heroConfig, _heroBulletFactory);
             _spawnEnemiesInSpawnPointsHandler.CreateCoroutineForSpawners(enemyConfig);
-            
+
             _gameCycle = new GameCycle.GameCycle(
                 _hero,
                 _enemiesCountHandler,
@@ -62,11 +65,11 @@ namespace Arena.Scripts.Infrastructure
                 _targetSpawnedEnemiesCount,
                 _winCondition,
                 _defeatCondition
-                );
-            
+            );
+
             _gameCycle.Win += OnGameConditionCheckerWin;
             _gameCycle.Defeat += OnGameConditionCheckerDefeat;
-            
+
             yield return new WaitForSeconds(1.5f);
         }
 
@@ -75,26 +78,31 @@ namespace Arena.Scripts.Infrastructure
             _controllersUpdateService?.Update(Time.deltaTime);
             _gameCycle?.Update(Time.deltaTime);
         }
-        
+
         private void OnGameConditionCheckerDefeat()
         {
+            _gameCycleEnded = true;
             OnGameCycleEnded();
             Debug.Log("Defeat");
         }
 
         private void OnGameConditionCheckerWin()
         {
+            _gameCycleEnded = true;
             OnGameCycleEnded();
             Debug.Log("Win");
         }
-        
+
         private void OnGameCycleEnded()
         {
+            if (_gameCycleEnded == true)
+                return;
+
             _gameCycle.Win -= OnGameConditionCheckerWin;
             _gameCycle.Defeat -= OnGameConditionCheckerDefeat;
-            
+
             _spawnEnemiesInSpawnPointsHandler.StopCoroutineForSpawners();
-            
+
             _enemySpawnerHandler.ClearEnemies();
             _heroBulletFactory.ClearBullets();
             _hero.Destroy();
