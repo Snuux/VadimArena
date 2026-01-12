@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using Arena.Scripts.Configs;
 using Arena.Scripts.Game;
 using Arena.Scripts.Infrastructure.GameCycle;
+using Arena.Scripts.Infrastructure.GameCycle.Conditions;
 using Arena.Scripts.Infrastructure.Spawners;
 using Arena.Scripts.UI;
 using UnityEngine;
@@ -77,25 +79,33 @@ namespace Arena.Scripts.Infrastructure
         {
             _controllersUpdateService?.Update(Time.deltaTime);
             _gameCycle?.Update(Time.deltaTime);
+
+            if (Input.GetKeyDown(KeyCode.Escape))
+                Application.Quit();
+        }
+
+        private void OnGUI()
+        {
+            _gameCycle.OnGUI();
         }
 
         private void OnGameConditionCheckerDefeat()
         {
-            _gameCycleEnded = true;
             OnGameCycleEnded();
             Debug.Log("Defeat");
         }
 
         private void OnGameConditionCheckerWin()
         {
-            _gameCycleEnded = true;
             OnGameCycleEnded();
             Debug.Log("Win");
         }
 
         private void OnGameCycleEnded()
         {
-            if (_gameCycleEnded == true)
+            if (_gameCycleEnded == false)
+                _gameCycleEnded = true;
+            else
                 return;
 
             _gameCycle.Win -= OnGameConditionCheckerWin;
@@ -105,7 +115,9 @@ namespace Arena.Scripts.Infrastructure
 
             _enemySpawnerHandler.ClearEnemies();
             _heroBulletFactory.ClearBullets();
-            _hero.Destroy();
+            
+            if (_hero.IsDead == false)
+                _hero.Destroy();
         }
     }
 }

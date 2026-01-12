@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Arena.Scripts.Game
+namespace Arena.Scripts.Helpers
 {
     public class MonoDestroyable : MonoBehaviour
     {

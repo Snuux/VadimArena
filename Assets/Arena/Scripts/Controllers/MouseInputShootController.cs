@@ -4,12 +4,12 @@ using UnityEngine;
 
 namespace Arena.Scripts.Controllers
 {
-    public class MouseShootController : Controller
+    public class MouseInputShootController : Controller
     {
         private readonly IShootSource _shootSource;
         private readonly Camera _camera;
 
-        public MouseShootController(IShootSource shootSource)
+        public MouseInputShootController(IShootSource shootSource)
         {
             _shootSource = shootSource;
             _camera = Camera.main;

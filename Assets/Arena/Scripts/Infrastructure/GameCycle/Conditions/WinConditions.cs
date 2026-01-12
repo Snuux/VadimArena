@@ -1,4 +1,4 @@
-﻿namespace Arena.Scripts.Infrastructure.GameCycle
+﻿namespace Arena.Scripts.Infrastructure.GameCycle.Conditions
 {
     public enum WinConditions
     {

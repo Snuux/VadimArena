@@ -5,14 +5,14 @@ using UnityEngine;
 
 namespace Arena.Scripts.Controllers
 {
-    public class VirtualCameraShakeController : Controller
+    public class CameraShakeController : Controller
     {
         private readonly IShootSource _shootSource;  
         private readonly CinemachineImpulseSource _impulseSource;
 
         private readonly float _shakeIntensity;
 
-        public VirtualCameraShakeController(IShootSource shootSource, CinemachineImpulseSource impulseSource, float shakeIntensity)
+        public CameraShakeController(IShootSource shootSource, CinemachineImpulseSource impulseSource, float shakeIntensity)
         {
             _shootSource = shootSource;
             _impulseSource = impulseSource;

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Arena.Scripts.Helpers;
+using UnityEngine;
 
 namespace Arena.Scripts.Game.Components
 {

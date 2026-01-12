@@ -1,7 +1,7 @@
-﻿namespace Arena.Scripts.Game
-{
-    using UnityEngine;
+﻿using UnityEngine;
 
+namespace Arena.Scripts.Helpers
+{
     public class DestroyWithTarget : MonoBehaviour
     {
         [SerializeField] private GameObject _target;

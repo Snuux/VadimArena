@@ -6,9 +6,9 @@ namespace Arena.Scripts.Infrastructure.Spawners
 {
     public class ControllersFactory
     {
-        public MouseShootController CreateMouseShootController(IShootSource shootSource)
+        public MouseInputShootController CreateMouseShootController(IShootSource shootSource)
         {
-            return new MouseShootController(shootSource);
+            return new MouseInputShootController(shootSource);
         }
 
         public ShootPushableController CreateShootPushableController(
@@ -26,12 +26,12 @@ namespace Arena.Scripts.Infrastructure.Spawners
             return new TimedRandomPushableController(pushable, targetTime, pushForce);
         }
 
-        public VirtualCameraShakeController CreateVirtualCameraShakeController(
+        public CameraShakeController CreateVirtualCameraShakeController(
             IShootSource shootSource, 
             CinemachineImpulseSource impulseSource, 
             float shakeIntensity)
         {
-            return new VirtualCameraShakeController(shootSource, impulseSource, shakeIntensity);
+            return new CameraShakeController(shootSource, impulseSource, shakeIntensity);
         }
     }
 }
