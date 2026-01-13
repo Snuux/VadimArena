@@ -73,12 +73,6 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
-/Packages
+/Packages/com.mibdev.fullscreen-editor
 /Assets/Plugins
 Assets/Plugins.meta
-.idea/.idea.VadimArena/.idea/indexLayout.xml
-.idea/.idea.VadimArena/.idea/encodings.xml
-.idea/.idea.VadimArena/.idea/projectSettingsUpdater.xml
-.idea/.idea.VadimArena/.idea/workspace.xml
-.idea/.idea.VadimArena/.idea/vcs.xml
-/WebBuild
