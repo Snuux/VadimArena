@@ -76,3 +76,5 @@ crashlytics-build.properties
 /Packages/com.mibdev.fullscreen-editor
 /Assets/Plugins
 Assets/Plugins.meta
+Packages/packages-lock.json
+Packages/packages-lock.json
