@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ca918d8-8319-42e9-af27-e89683b607e4" name="Changes" comment="" />
+    <list default="true" id="5ca918d8-8319-42e9-af27-e89683b607e4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Etc.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Etc/ServiceLocator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Etc/ServiceLocator.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Etc/ServiceLocatorTest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Etc/ServiceLocatorTest.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/AssetManagment.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/AssetManagment/ResourcesAssetsLoader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/AssetManagment/ResourcesAssetsLoader.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/ConfigsManagment/IConfigsLoader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/ConfigsManagment/IConfigsLoader.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/ConfigsManagment/ResourcesConfigsLoader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/ConfigsManagment/ResourcesConfigsLoader.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.VadimArena/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VadimArena/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +31,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Snuux&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Snuux/VadimArena.git&quot;,
+    &quot;accountId&quot;: &quot;293dcdc5-146c-447b-86e8-5687424a6b10&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/28/cf2c2873/Func`1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/c8/b7de05dc/Func`2.cs" root0="FORCE_HIGHLIGHTING" />
@@ -56,12 +83,16 @@
     <setting file="file://$PROJECT_DIR$/Assets/Arena/Scripts/Infrastructure/Spawners/HeroFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Arena/Scripts/Infrastructure/Spawners/SpawnEnemiesInSpawnPointsHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Arena/Scripts/UI/LoadingScreen.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/AssetManagment/ResourcesAssetsLoader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.9.7/Runtime/Impulse/CinemachineImpulseSource.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="37vjjhnmKskf9YocbMK5HcECr1C" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -80,6 +111,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -153,6 +185,11 @@
       <workItem from="1768170656155" duration="945000" />
       <workItem from="1768172046866" duration="1701000" />
       <workItem from="1768240884945" duration="2629000" />
+      <workItem from="1768336034426" duration="951000" />
+      <workItem from="1768337062652" duration="2643000" />
+      <workItem from="1768375707275" duration="2693000" />
+      <workItem from="1768417495294" duration="1651000" />
+      <workItem from="1768419198786" duration="953000" />
     </task>
     <servers />
   </component>
@@ -166,6 +203,17 @@
     <option name="unityProjectFolder" value="true" />
   </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
@@ -186,5 +234,9 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
