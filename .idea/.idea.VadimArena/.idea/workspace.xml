@@ -5,25 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ca918d8-8319-42e9-af27-e89683b607e4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VadimArena/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VadimArena/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/AssetManagment.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Utilities/AssetManagment.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/AssetManagment/ResourcesAssetsLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Utilities/AssetManagment/ResourcesAssetsLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/AssetManagment/ResourcesAssetsLoader.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Utilities/AssetManagment/ResourcesAssetsLoader.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/ConfigsManagment.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Utilities/ConfigsManagment.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/ConfigsManagment/ConfigsProviderService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Utilities/ConfigsManagment/ConfigsProviderService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/ConfigsManagment/ConfigsProviderService.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Utilities/ConfigsManagment/ConfigsProviderService.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/ConfigsManagment/IConfigsLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Utilities/ConfigsManagment/IConfigsLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/ConfigsManagment/IConfigsLoader.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Utilities/ConfigsManagment/IConfigsLoader.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/ConfigsManagment/ResourcesConfigsLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Utilities/ConfigsManagment/ResourcesConfigsLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/ConfigsManagment/ResourcesConfigsLoader.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Utilities/ConfigsManagment/ResourcesConfigsLoader.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/ConfigsManagment/TestConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Utilities/ConfigsManagment/TestConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/ConfigsManagment/TestConfig.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Utilities/ConfigsManagment/TestConfig.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/CoroutineManagment.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Utilities/CoroutineManagment.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/CoroutineManagment/CoroutinesPerformer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Utilities/CoroutineManagment/CoroutinesPerformer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/CoroutineManagment/CoroutinesPerformer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Utilities/CoroutineManagment/CoroutinesPerformer.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/CoroutineManagment/ICoroutinesPerformer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Utilities/CoroutineManagment/ICoroutinesPerformer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/CoroutineManagment/ICoroutinesPerformer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Utilities/CoroutineManagment/ICoroutinesPerformer.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +74,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Arena/Scripts/UI/LoadingScreen.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Project.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Etc/ServiceLocatorTest.cs.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Utilities/AssetManagment.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Utilities/ConfigsManagment.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Utilities/CoroutineManagment/ICoroutinesPerformer.cs.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.9.7/Runtime/Impulse/CinemachineImpulseSource.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -111,6 +96,7 @@
     "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "git-widget-placeholder": "master",
@@ -198,7 +184,7 @@
       <workItem from="1768337062652" duration="2643000" />
       <workItem from="1768375707275" duration="2693000" />
       <workItem from="1768417495294" duration="1651000" />
-      <workItem from="1768419198786" duration="1598000" />
+      <workItem from="1768419198786" duration="2412000" />
     </task>
     <task id="LOCAL-00001" summary="Updates from lessons">
       <option name="closed" value="true" />
@@ -216,7 +202,23 @@
       <option name="project" value="LOCAL" />
       <updated>1768420374164</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Change path of Services scripts">
+      <option name="closed" value="true" />
+      <created>1768420884380</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1768420884380</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Again fix .gitignore">
+      <option name="closed" value="true" />
+      <created>1768421266768</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1768421266768</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,7 +247,9 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Updates from lessons" />
     <MESSAGE value="Add unversioned files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add unversioned files" />
+    <MESSAGE value="Change path of Services scripts" />
+    <MESSAGE value="Again fix .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Again fix .gitignore" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
