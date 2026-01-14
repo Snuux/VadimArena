@@ -5,19 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ca918d8-8319-42e9-af27-e89683b607e4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Etc.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Etc/ServiceLocator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Etc/ServiceLocator.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Etc/ServiceLocatorTest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Etc/ServiceLocatorTest.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/AssetManagment.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/AssetManagment/ResourcesAssetsLoader.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/AssetManagment/ResourcesAssetsLoader.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/ConfigsManagment/IConfigsLoader.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/ConfigsManagment/IConfigsLoader.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/ConfigsManagment/ResourcesConfigsLoader.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/ConfigsManagment/ResourcesConfigsLoader.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VadimArena/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VadimArena/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/AssetManagment.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Utilities/AssetManagment.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/AssetManagment/ResourcesAssetsLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Utilities/AssetManagment/ResourcesAssetsLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/AssetManagment/ResourcesAssetsLoader.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Utilities/AssetManagment/ResourcesAssetsLoader.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/ConfigsManagment.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Utilities/ConfigsManagment.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/ConfigsManagment/ConfigsProviderService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Utilities/ConfigsManagment/ConfigsProviderService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/ConfigsManagment/ConfigsProviderService.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Utilities/ConfigsManagment/ConfigsProviderService.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/ConfigsManagment/IConfigsLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Utilities/ConfigsManagment/IConfigsLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/ConfigsManagment/IConfigsLoader.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Utilities/ConfigsManagment/IConfigsLoader.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/ConfigsManagment/ResourcesConfigsLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Utilities/ConfigsManagment/ResourcesConfigsLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/ConfigsManagment/ResourcesConfigsLoader.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Utilities/ConfigsManagment/ResourcesConfigsLoader.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/ConfigsManagment/TestConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Utilities/ConfigsManagment/TestConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/ConfigsManagment/TestConfig.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Utilities/ConfigsManagment/TestConfig.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/CoroutineManagment.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Utilities/CoroutineManagment.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/CoroutineManagment/CoroutinesPerformer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Utilities/CoroutineManagment/CoroutinesPerformer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/CoroutineManagment/CoroutinesPerformer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Utilities/CoroutineManagment/CoroutinesPerformer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/CoroutineManagment/ICoroutinesPerformer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Utilities/CoroutineManagment/ICoroutinesPerformer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/CoroutineManagment/ICoroutinesPerformer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Utilities/CoroutineManagment/ICoroutinesPerformer.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +30,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager" show_ignored="true" />
   <component name="DpaMonitoringSettings">
     <option name="firstShow" value="false" />
   </component>
@@ -83,9 +89,12 @@
     <setting file="file://$PROJECT_DIR$/Assets/Arena/Scripts/Infrastructure/Spawners/HeroFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Arena/Scripts/Infrastructure/Spawners/SpawnEnemiesInSpawnPointsHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Arena/Scripts/UI/LoadingScreen.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Infrastructure/AssetManagment/ResourcesAssetsLoader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Project.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Etc/ServiceLocatorTest.cs.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Project/Develop/Runtime/Utilities/CoroutineManagment/ICoroutinesPerformer.cs.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.9.7/Runtime/Impulse/CinemachineImpulseSource.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -97,24 +106,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Builds\VadimArena.exe" />
@@ -189,13 +198,31 @@
       <workItem from="1768337062652" duration="2643000" />
       <workItem from="1768375707275" duration="2693000" />
       <workItem from="1768417495294" duration="1651000" />
-      <workItem from="1768419198786" duration="953000" />
+      <workItem from="1768419198786" duration="1598000" />
     </task>
+    <task id="LOCAL-00001" summary="Updates from lessons">
+      <option name="closed" value="true" />
+      <created>1768420230948</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1768420230948</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add unversioned files">
+      <option name="closed" value="true" />
+      <created>1768420374164</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1768420374164</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityProjectDiscoverer">
     <option name="hasUnityReference" value="true" />
@@ -216,6 +243,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Updates from lessons" />
+    <MESSAGE value="Add unversioned files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add unversioned files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
