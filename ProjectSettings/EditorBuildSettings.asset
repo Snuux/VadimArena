@@ -6,6 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/_Project/Scenes/GameEntryPoint.unity
+    guid: bb8f9b5a87a74e74e932791d75c4b7be
+  - enabled: 1
+    path: Assets/_Project/Scenes/Empty.unity
+    guid: 7bfe2eda13bdf3c46b154211f016e904
+  - enabled: 1
+    path: Assets/_Project/Scenes/Gameplay.unity
+    guid: e296e9cb80e4339468d2ebf1a43c76c2
+  - enabled: 1
+    path: Assets/_Project/Scenes/MainMenu.unity
+    guid: b0b48583bac96bb448a4cbff61846a02
+  - enabled: 0
     path: Assets/Arena/ArenaScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects: {}

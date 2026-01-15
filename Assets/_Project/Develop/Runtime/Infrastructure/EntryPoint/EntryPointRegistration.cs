@@ -2,6 +2,8 @@
 using _Project.Develop.Runtime.Infrastructure.ConfigsManagment;
 using _Project.Develop.Runtime.Infrastructure.CoroutineManagment;
 using _Project.Develop.Runtime.Infrastructure.DI;
+using _Project.Develop.Runtime.Utilities.LoadingScreen;
+using _Project.Develop.Runtime.Utilities.SceneManagment;
 using UnityEngine;
 
 namespace _Project.Develop.Runtime.Infrastructure.EntryPoint
@@ -13,6 +15,9 @@ namespace _Project.Develop.Runtime.Infrastructure.EntryPoint
             container.RegisterAsSingle<ICoroutinesPerformer>(CreateCoroutinesPerformer);
             container.RegisterAsSingle(CreateConfigsProvider);
             container.RegisterAsSingle(CreateResourcesAssetsLoader);
+            container.RegisterAsSingle(CreateSceneLoaderService);
+            container.RegisterAsSingle(CreateSceneSwitcherService);
+            container.RegisterAsSingle<ILoadingScreen>(CreateLoadingScreen);
         }
         
         private static ConfigsProviderService CreateConfigsProvider(DIContainer c)
@@ -30,10 +35,28 @@ namespace _Project.Develop.Runtime.Infrastructure.EntryPoint
         {
             ResourcesAssetsLoader resourcesAssetsLoader = c.Resolve<ResourcesAssetsLoader>();
             
-            var coroutinesPerformerPrefab = resourcesAssetsLoader
+            CoroutinesPerformer coroutinesPerformerPrefab = resourcesAssetsLoader
                 .Load<CoroutinesPerformer>("Utilities/CoroutinePerformer");
 
             return Object.Instantiate(coroutinesPerformerPrefab);
         }
+        
+        private static SceneLoaderService CreateSceneLoaderService(DIContainer c) => 
+            new SceneLoaderService();
+        
+        private static StandardLoadingScreen CreateLoadingScreen(DIContainer c)
+        {
+            ResourcesAssetsLoader resourcesAssetsLoader = c.Resolve<ResourcesAssetsLoader>();
+            
+            StandardLoadingScreen standardLoadingScreen = resourcesAssetsLoader
+                .Load<StandardLoadingScreen>("Utilities/StandardLoadingScreen");
+
+            return Object.Instantiate(standardLoadingScreen);
+        }
+
+        private static SceneSwitcherService CreateSceneSwitcherService(DIContainer c)
+            => new(c.Resolve<SceneLoaderService>(),
+                c.Resolve<StandardLoadingScreen>(),
+                c);
     }
 }
