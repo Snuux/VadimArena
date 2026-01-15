@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using _Project.Develop.Runtime.Infrastructure.AssetManagment;
 using _Project.Develop.Runtime.Infrastructure.ConfigsManagment;
 using _Project.Develop.Runtime.Infrastructure.CoroutineManagment;
@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace _Project.Develop.Runtime
 {
-    public class Test : MonoBehaviour
+    public class SimpleTest : MonoBehaviour
     {
         private ICoroutinesPerformer _coroutinesPerformer;
         private ResourcesAssetsLoader _resourcesAssetsLoader;
