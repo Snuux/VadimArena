@@ -16,12 +16,11 @@ namespace _Project.Develop.Runtime.Infrastructure.EntryPoint
             SetupAppSettings();
 
             Debug.Log("Process of registration of all services");
-            DIContainer container = new DIContainer();
+            DIContainer projectContainer = new DIContainer();
 
-            EntryPointRegistration.Process(container);
+            ProjectContextRegistration.Process(projectContainer);
 
-            container.Resolve<ICoroutinesPerformer>().StartPerform(Initialize(container));
-            
+            projectContainer.Resolve<ICoroutinesPerformer>().StartPerform(Initialize(projectContainer));
         }
 
         private void SetupAppSettings()

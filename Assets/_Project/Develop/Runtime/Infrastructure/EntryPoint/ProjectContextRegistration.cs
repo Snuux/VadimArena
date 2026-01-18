@@ -8,7 +8,7 @@ using UnityEngine;
 
 namespace _Project.Develop.Runtime.Infrastructure.EntryPoint
 {
-    public class EntryPointRegistration
+    public class ProjectContextRegistration
     {
         public static void Process(DIContainer container)
         {

@@ -1,6 +1,6 @@
 ﻿namespace _Project.Develop.Runtime.Utilities.SceneManagment
 {
-    public class IInputSceneArgs
+    public interface IInputSceneArgs
     {
         
     }

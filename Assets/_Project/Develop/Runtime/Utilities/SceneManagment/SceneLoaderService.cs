@@ -6,7 +6,7 @@ namespace _Project.Develop.Runtime.Utilities.SceneManagment
 {
     public class SceneLoaderService
     {
-        public IEnumerator LoadAsync(string sceneName, LoadSceneMode loadSceneMode = LoadSceneMode.Additive)
+        public IEnumerator LoadAsync(string sceneName, LoadSceneMode loadSceneMode = LoadSceneMode.Single)
         {
             AsyncOperation wait = SceneManager.LoadSceneAsync(sceneName, loadSceneMode);
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace _Project.Develop.Runtime.Infrastructure.Gameplay.Infrastructure
 {
-    public class GameplayContextRegistration
+    public class GameplayContextRegistrations
     {
         public static void Process(DIContainer container, GameplayInputArgs args)
         {
