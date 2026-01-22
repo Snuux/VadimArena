@@ -10,6 +10,7 @@ namespace Assets._Project.Develop.Runtime.Infrastructure.Gameplay
     public class GameCycleHandler
     {
         private DIContainer _container;
+
         private RandomSymbolsSequenceService _randomSymbolsSequenceService;
         private GameFinishStateHandler _gameFinishStateHandler;
         private InputSequenceHandler _inputSequenceHandler;
@@ -38,10 +39,8 @@ namespace Assets._Project.Develop.Runtime.Infrastructure.Gameplay
             {
                 _inputSequenceHandler.ProcessInputKeys();
 
-                string inputSymbols = _inputSequenceHandler.InputSymbols;
-
                 _gameFinishStateHandler.SetStateBySequenceEquality(
-                    inputSymbols,
+                    _inputSequenceHandler.InputSymbols,
                     _randomSymbolsSequenceService.Length,
                     _randomSymbolsSequenceService.IsSameSequence);
 
@@ -60,7 +59,5 @@ namespace Assets._Project.Develop.Runtime.Infrastructure.Gameplay
             ICoroutinesPerformer coroutinesPerformer = _container.Resolve<ICoroutinesPerformer>();
             coroutinesPerformer.StartPerform(sceneSwitcherService.ProcessSwitchTo(sceneName));
         }
-
-
     }
 }

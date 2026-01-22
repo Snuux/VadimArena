@@ -37,33 +37,19 @@ namespace _Project.Develop.Runtime.Infrastructure.Meta.Infrastructure
         public void Update()
         {
             if (Input.GetKeyDown(KeyCode.Alpha1))
-            {
-                SceneSwitcherService sceneSwitcherService = _container.Resolve<SceneSwitcherService>();
-                ICoroutinesPerformer coroutinesPerformer = _container.Resolve<ICoroutinesPerformer>();
-
-                ConfigsProviderService configsProviderService = _container.Resolve<ConfigsProviderService>();
-                NumbersSequence numbersSequence = configsProviderService.GetConfig<NumbersSequence>();
-
-                CreateGameplayWithSequence(sceneSwitcherService, coroutinesPerformer, numbersSequence);
-            }
+                CreateGameplayWithSequence(
+                    _container.Resolve<ConfigsProviderService>().GetConfig<NumbersSequence>());
 
             if (Input.GetKeyDown(KeyCode.Alpha2))
-            {
-                SceneSwitcherService sceneSwitcherService = _container.Resolve<SceneSwitcherService>();
-                ICoroutinesPerformer coroutinesPerformer = _container.Resolve<ICoroutinesPerformer>();
-
-                ConfigsProviderService configsProviderService = _container.Resolve<ConfigsProviderService>();
-                SymbolsSequence symbolsSequence = configsProviderService.GetConfig<SymbolsSequence>();
-
-                CreateGameplayWithSequence(sceneSwitcherService, coroutinesPerformer, symbolsSequence);
-            }
+                CreateGameplayWithSequence(
+                    _container.Resolve<ConfigsProviderService>().GetConfig<SymbolsSequence>());
         }
 
-        private void CreateGameplayWithSequence(
-            SceneSwitcherService sceneSwitcherService, 
-            ICoroutinesPerformer coroutinesPerformer, 
-            ISequence sequence)
+        private void CreateGameplayWithSequence(ISequence sequence)
         {
+            SceneSwitcherService sceneSwitcherService = _container.Resolve<SceneSwitcherService>();
+            ICoroutinesPerformer coroutinesPerformer = _container.Resolve<ICoroutinesPerformer>();
+
             coroutinesPerformer.StartPerform(sceneSwitcherService.ProcessSwitchTo(
                 Scenes.Gameplay, new GameplayInputArgs(
                     sequence.Length,
