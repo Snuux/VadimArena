@@ -3,14 +3,18 @@ using System.Collections;
 using _Project.Develop.Runtime.Infrastructure.CoroutineManagment;
 using _Project.Develop.Runtime.Infrastructure.DI;
 using _Project.Develop.Runtime.Utilities.SceneManagment;
+using Assets._Project.Develop.Runtime.Infrastructure.Gameplay;
 using UnityEngine;
 
 namespace _Project.Develop.Runtime.Infrastructure.Gameplay.Infrastructure
 {
-    public class GameplayBoostrap : SceneBoostrap
+    public class GameplayBootstrap : SceneBoostrap
     {
         private DIContainer _container;
         private GameplayInputArgs _inputArgs;
+
+        private GameCycleHandler _gameCycle;
+        private bool _running;
 
         public override void ProcessRegistration(DIContainer container, IInputSceneArgs sceneArgs = null)
         {
@@ -20,14 +24,15 @@ namespace _Project.Develop.Runtime.Infrastructure.Gameplay.Infrastructure
                 throw new ArgumentException($"{nameof(sceneArgs)} is not match {typeof(GameplayInputArgs)} type");
 
             _inputArgs = gameplayInputArgs;
-            
+
             GameplayContextRegistrations.Process(_container, _inputArgs);
         }
 
         public override IEnumerator Initialize()
         {
-            Debug.Log($"You are on LEVEL: {_inputArgs.LevelNumber}");
             Debug.Log("Initialization of gameplay scene");
+
+            _gameCycle = _container.Resolve<GameCycleHandler>();
 
             yield break;
         }
@@ -35,16 +40,15 @@ namespace _Project.Develop.Runtime.Infrastructure.Gameplay.Infrastructure
         public override void Run()
         {
             Debug.Log("Start of gameplay scene");
+
+            _gameCycle.Run();
+            _running = true;
         }
 
         public void Update()
         {
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                SceneSwitcherService sceneSwitcherService = _container.Resolve<SceneSwitcherService>();
-                ICoroutinesPerformer coroutinesPerformer = _container.Resolve<ICoroutinesPerformer>();
-                coroutinesPerformer.StartPerform(sceneSwitcherService.ProcessSwitchTo(Scenes.MainMenu));
-            }
+            if (_running)
+                _gameCycle.Update(Time.deltaTime);
         }
     }
 }
