@@ -6,12 +6,13 @@ using _Project.Develop.Runtime.Infrastructure.CoroutineManagment;
 using _Project.Develop.Runtime.Infrastructure.DI;
 using _Project.Develop.Runtime.Utilities.SceneManagment;
 using Assets._Project.Develop.Runtime.Configs;
+using Assets._Project.Develop.Runtime.Infrastructure.Meta.Infrastructure;
 using Unity.VisualScripting;
 using UnityEngine;
 
 namespace _Project.Develop.Runtime.Infrastructure.Meta.Infrastructure
 {
-    public class MainMenuBootstrap : SceneBoostrap
+    public partial class MainMenuBootstrap : SceneBoostrap
     {
         private DIContainer _container;
 
@@ -37,24 +38,10 @@ namespace _Project.Develop.Runtime.Infrastructure.Meta.Infrastructure
         public void Update()
         {
             if (Input.GetKeyDown(KeyCode.Alpha1))
-                CreateGameplayWithSequence(
-                    _container.Resolve<ConfigsProviderService>().GetConfig<NumbersSequence>());
+                _container.Resolve<ChangeSceneByLevelTypeService>().ChangeSceneBy(LevelTypes.Letters);
 
             if (Input.GetKeyDown(KeyCode.Alpha2))
-                CreateGameplayWithSequence(
-                    _container.Resolve<ConfigsProviderService>().GetConfig<SymbolsSequence>());
-        }
-
-        private void CreateGameplayWithSequence(ISequence sequence)
-        {
-            SceneSwitcherService sceneSwitcherService = _container.Resolve<SceneSwitcherService>();
-            ICoroutinesPerformer coroutinesPerformer = _container.Resolve<ICoroutinesPerformer>();
-
-            coroutinesPerformer.StartPerform(sceneSwitcherService.ProcessSwitchTo(
-                Scenes.Gameplay, new GameplayInputArgs(
-                    sequence.Length,
-                    sequence.Symbols
-                )));
+                _container.Resolve<ChangeSceneByLevelTypeService>().ChangeSceneBy(LevelTypes.Digits);
         }
     }
 }

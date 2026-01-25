@@ -1,5 +1,6 @@
 ﻿using _Project.Develop.Runtime.Infrastructure.AssetManagment;
 using _Project.Develop.Runtime.Infrastructure.ConfigsManagment;
+using _Project.Develop.Runtime.Infrastructure.CoroutineManagment;
 using _Project.Develop.Runtime.Infrastructure.DI;
 using _Project.Develop.Runtime.Utilities.SceneManagment;
 using Assets._Project.Develop.Runtime.Infrastructure.Gameplay;
@@ -31,7 +32,13 @@ namespace _Project.Develop.Runtime.Infrastructure.Gameplay.Infrastructure
 
         private static GameCycleHandler CreateGameCycle(DIContainer c)
         {
-            return new GameCycleHandler(c);
+            return new GameCycleHandler(
+                c.Resolve<RandomSymbolsSequenceService>(),
+                c.Resolve<GameFinishStateHandler>(),
+                c.Resolve<InputSequenceHandler>(),
+                c.Resolve<ICoroutinesPerformer>(),
+                c.Resolve<SceneSwitcherService>()
+                );
         }
 
         private static GameFinishStateHandler CreateGameFinishStateHandler(DIContainer c)

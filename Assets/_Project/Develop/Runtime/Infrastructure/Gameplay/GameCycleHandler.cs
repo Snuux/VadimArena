@@ -9,25 +9,29 @@ namespace Assets._Project.Develop.Runtime.Infrastructure.Gameplay
 {
     public class GameCycleHandler
     {
-        private DIContainer _container;
-
         private RandomSymbolsSequenceService _randomSymbolsSequenceService;
         private GameFinishStateHandler _gameFinishStateHandler;
         private InputSequenceHandler _inputSequenceHandler;
+        private ICoroutinesPerformer _coroutinesPerformer;
+        private SceneSwitcherService _sceneSwitcherService;
 
-        public GameCycleHandler(DIContainer container)
+        public GameCycleHandler(
+            RandomSymbolsSequenceService randomSymbolsSequenceService, 
+            GameFinishStateHandler gameFinishStateHandler, 
+            InputSequenceHandler inputSequenceHandler, 
+            ICoroutinesPerformer coroutinesPerformer, 
+            SceneSwitcherService sceneSwitcherService)
         {
-            _container = container;
+            _randomSymbolsSequenceService = randomSymbolsSequenceService;
+            _gameFinishStateHandler = gameFinishStateHandler;
+            _inputSequenceHandler = inputSequenceHandler;
+            _coroutinesPerformer = coroutinesPerformer;
+            _sceneSwitcherService = sceneSwitcherService;
         }
 
         public void Run()
         {
-            _randomSymbolsSequenceService = _container.Resolve<RandomSymbolsSequenceService>();
             _randomSymbolsSequenceService.GenerateSequence();
-
-            _gameFinishStateHandler = _container.Resolve<GameFinishStateHandler>();
-
-            _inputSequenceHandler = _container.Resolve<InputSequenceHandler>();
             _inputSequenceHandler.Clear();
 
             Debug.Log("Generated Sequence:" + string.Join("", _randomSymbolsSequenceService.RandomSequence));
@@ -55,9 +59,7 @@ namespace Assets._Project.Develop.Runtime.Infrastructure.Gameplay
 
         private void SwitchSceneTo(string sceneName)
         {
-            SceneSwitcherService sceneSwitcherService = _container.Resolve<SceneSwitcherService>();
-            ICoroutinesPerformer coroutinesPerformer = _container.Resolve<ICoroutinesPerformer>();
-            coroutinesPerformer.StartPerform(sceneSwitcherService.ProcessSwitchTo(sceneName));
+            _coroutinesPerformer.StartPerform(_sceneSwitcherService.ProcessSwitchTo(sceneName));
         }
     }
 }

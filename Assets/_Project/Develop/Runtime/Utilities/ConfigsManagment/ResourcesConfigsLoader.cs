@@ -13,8 +13,7 @@ namespace _Project.Develop.Runtime.Infrastructure.ConfigsManagment
 
         private Dictionary<Type, string> _configsResourcesPath = new()
         {
-            { typeof(SymbolsSequence), "Configs/CharactersSequence" },
-            { typeof(NumbersSequence), "Configs/NumbersSequence" }
+            { typeof(LevelsConfig), "Configs/LevelsConfig" }
         };
 
         public ResourcesConfigsLoader(ResourcesAssetsLoader resources)
@@ -26,7 +25,6 @@ namespace _Project.Develop.Runtime.Infrastructure.ConfigsManagment
         {
             Dictionary<Type, object> loadedConfigs = new();
             
-            //для каждого типа мы подгружаем конфиг по пути
             foreach (KeyValuePair<Type,string> configResourcesPath in _configsResourcesPath)
             {
                 ScriptableObject config = _resources
