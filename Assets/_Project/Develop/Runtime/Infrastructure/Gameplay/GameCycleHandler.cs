@@ -34,7 +34,9 @@ namespace Assets._Project.Develop.Runtime.Infrastructure.Gameplay
             _randomSymbolsSequenceService.GenerateSequence();
             _inputSequenceHandler.Clear();
 
-            Debug.Log("Generated Sequence:" + string.Join("", _randomSymbolsSequenceService.RandomSequence));
+            Debug.Log("Generated Sequence:" + _randomSymbolsSequenceService.RandomSequence);
+            Debug.Log("Repeat it:");
+
         }
 
         public void Update(float deltaTime)

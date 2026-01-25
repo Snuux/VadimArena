@@ -33,6 +33,7 @@ namespace _Project.Develop.Runtime.Infrastructure.Meta.Infrastructure
         public override void Run()
         {
             Debug.Log("Start of meta scene");
+            Debug.Log("Enter 1 or 2 for load sequence with Letters or Digits:");
         }
 
         public void Update()
