@@ -1,10 +1,11 @@
-﻿using _Project.Develop.Runtime.Infrastructure.ConfigsManagment;
-using _Project.Develop.Runtime.Infrastructure.CoroutineManagment;
-using _Project.Develop.Runtime.Infrastructure.DI;
-using _Project.Develop.Runtime.Utilities.SceneManagment;
-using Assets._Project.Develop.Runtime.Configs;
+﻿using Assets._Project.Develop.Runtime.Configs;
+using Assets._Project.Develop.Runtime.Infrastructure.DI;
+using Assets._Project.Develop.Runtime.Infrastructure.Gameplay.Infrastructure;
+using Assets._Project.Develop.Runtime.Utilities.ConfigsManagment;
+using Assets._Project.Develop.Runtime.Utilities.CoroutineManagment;
+using Assets._Project.Develop.Runtime.Utilities.SceneManagment;
 
-namespace _Project.Develop.Runtime.Infrastructure.Meta.Infrastructure
+namespace Assets._Project.Develop.Runtime.Infrastructure.Meta
 {
     class ChangeSceneByLevelTypeService
     {

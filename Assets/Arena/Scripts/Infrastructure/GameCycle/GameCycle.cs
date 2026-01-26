@@ -1,10 +1,8 @@
 ﻿using System;
-using Arena.Scripts.Game;
-using Arena.Scripts.Infrastructure.GameCycle.Conditions;
-using Arena.Scripts.Infrastructure.Spawners;
-using UnityEngine;
+using Assets.Arena.Scripts.Game;
+using Assets.Arena.Scripts.Infrastructure.GameCycle.Conditions;
 
-namespace Arena.Scripts.Infrastructure.GameCycle
+namespace Assets.Arena.Scripts.Infrastructure.GameCycle
 {
     public class GameCycle
     {

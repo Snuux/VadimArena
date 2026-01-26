@@ -1,8 +1,8 @@
-using Arena.Scripts.Controllers;
-using Arena.Scripts.Game.Components;
+using Assets.Arena.Scripts.Controllers;
+using Assets.Arena.Scripts.Game.Components;
 using Cinemachine;
 
-namespace Arena.Scripts.Infrastructure.Spawners
+namespace Assets.Arena.Scripts.Infrastructure.Spawners
 {
     public class ControllersFactory
     {

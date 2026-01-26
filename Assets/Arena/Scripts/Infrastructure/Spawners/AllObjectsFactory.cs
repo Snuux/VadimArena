@@ -1,9 +1,9 @@
-using Arena.Scripts.Game;
-using Arena.Scripts.Game.Components;
+using Assets.Arena.Scripts.Game;
+using Assets.Arena.Scripts.Game.Components;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace Arena.Scripts.Infrastructure.Spawners
+namespace Assets.Arena.Scripts.Infrastructure.Spawners
 {
     public class AllObjectsFactory
     {

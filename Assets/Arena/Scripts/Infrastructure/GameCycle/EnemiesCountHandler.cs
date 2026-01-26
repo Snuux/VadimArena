@@ -1,6 +1,6 @@
-﻿using Arena.Scripts.Game;
+﻿using Assets.Arena.Scripts.Game;
 
-namespace Arena.Scripts.Infrastructure.GameCycle
+namespace Assets.Arena.Scripts.Infrastructure.GameCycle
 {
     public class EnemiesCountHandler
     {

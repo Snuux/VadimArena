@@ -1,6 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using Assets._Project.Develop.Runtime.Utilities.SceneManagment;
+using System.Collections.Generic;
 
-namespace _Project.Develop.Runtime.Utilities.SceneManagment
+namespace Assets._Project.Develop.Runtime.Infrastructure.Gameplay.Infrastructure
 {
     public class GameplayInputArgs : IInputSceneArgs
     {

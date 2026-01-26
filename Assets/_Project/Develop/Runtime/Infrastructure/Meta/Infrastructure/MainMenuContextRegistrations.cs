@@ -1,5 +1,4 @@
-﻿using _Project.Develop.Runtime.Infrastructure.DI;
-using _Project.Develop.Runtime.Infrastructure.Meta.Infrastructure;
+﻿using Assets._Project.Develop.Runtime.Infrastructure.DI;
 using UnityEngine;
 
 namespace Assets._Project.Develop.Runtime.Infrastructure.Meta.Infrastructure

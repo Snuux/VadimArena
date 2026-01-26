@@ -1,10 +1,10 @@
 using System.Collections.Generic;
-using Arena.Scripts.Configs;
-using Arena.Scripts.Game;
+using Assets.Arena.Scripts.Configs;
+using Assets.Arena.Scripts.Game;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace Arena.Scripts.Infrastructure.Spawners
+namespace Assets.Arena.Scripts.Infrastructure.Spawners
 {
     public class EnemySpawnerHandler //тут не только спаун, но и список врагов которых заспаунил
     {

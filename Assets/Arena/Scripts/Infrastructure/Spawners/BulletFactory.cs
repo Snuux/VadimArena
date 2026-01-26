@@ -1,13 +1,10 @@
 ﻿using System.Collections.Generic;
-using Arena.Scripts.Configs;
-using Arena.Scripts.Controllers;
-using Arena.Scripts.Game;
-using Arena.Scripts.Game.Components;
-using Arena.Scripts.Helpers;
-using Cinemachine;
+using Assets.Arena.Scripts.Game;
+using Assets.Arena.Scripts.Game.Components;
+using Assets.Arena.Scripts.Helpers;
 using UnityEngine;
 
-namespace Arena.Scripts.Infrastructure.Spawners
+namespace Assets.Arena.Scripts.Infrastructure.Spawners
 {
     public class BulletFactory
     {

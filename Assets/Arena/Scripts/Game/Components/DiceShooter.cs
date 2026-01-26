@@ -1,9 +1,10 @@
 ﻿using System;
-using Arena.Scripts.Infrastructure.Spawners;
+using Assets.Arena.Scripts.Game;
+using Assets.Arena.Scripts.Infrastructure.Spawners;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace Arena.Scripts.Game.Components
+namespace Assets.Arena.Scripts.Game.Components
 {
     public class DiceShooter
     {

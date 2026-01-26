@@ -1,8 +1,5 @@
-﻿using _Project.Develop.Runtime.Infrastructure.CoroutineManagment;
-using _Project.Develop.Runtime.Infrastructure.DI;
-using _Project.Develop.Runtime.Utilities.SceneManagment;
-using System.Collections.Generic;
-using Unity.VisualScripting;
+﻿using Assets._Project.Develop.Runtime.Utilities.CoroutineManagment;
+using Assets._Project.Develop.Runtime.Utilities.SceneManagment;
 using UnityEngine;
 
 namespace Assets._Project.Develop.Runtime.Infrastructure.Gameplay

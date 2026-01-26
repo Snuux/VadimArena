@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using Arena.Scripts.Game;
+using Assets.Arena.Scripts.Game;
 using UnityEngine;
 
-namespace Arena.Scripts.Configs
+namespace Assets.Arena.Scripts.Configs
 {
     [CreateAssetMenu(menuName = "Configs/Gameplay/EnemyConfig", fileName = "EnemyConfig")]
     public class EnemyConfig : ScriptableObject

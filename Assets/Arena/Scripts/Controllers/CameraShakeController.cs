@@ -1,9 +1,8 @@
-﻿using Arena.Scripts.Game;
-using Arena.Scripts.Game.Components;
+﻿using Assets.Arena.Scripts.Game.Components;
 using Cinemachine;
 using UnityEngine;
 
-namespace Arena.Scripts.Controllers
+namespace Assets.Arena.Scripts.Controllers
 {
     public class CameraShakeController : Controller
     {

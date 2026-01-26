@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Arena.Scripts.UI
+namespace Assets.Arena.Scripts.UI
 {
     public class LoadingScreen : MonoBehaviour
     {

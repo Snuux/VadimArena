@@ -1,10 +1,9 @@
 using System;
-using Arena.Scripts.Game.Components;
-using Arena.Scripts.Helpers;
-using Arena.Scripts.Infrastructure.Spawners;
+using Assets.Arena.Scripts.Game.Components;
+using Assets.Arena.Scripts.Helpers;
 using UnityEngine;
 
-namespace Arena.Scripts.Game
+namespace Assets.Arena.Scripts.Game
 {
     public class Hero : MonoDestroyable, IShootSource, IPushable, IDamagable
     {

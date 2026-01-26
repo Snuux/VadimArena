@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Arena.Scripts.Game.Components
+namespace Assets.Arena.Scripts.Game.Components
 {
     public interface IDamagable
     {

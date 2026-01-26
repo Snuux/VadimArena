@@ -1,7 +1,7 @@
-﻿using Arena.Scripts.Helpers;
+﻿using Assets.Arena.Scripts.Helpers;
 using UnityEngine;
 
-namespace Arena.Scripts.Game.Components
+namespace Assets.Arena.Scripts.Game.Components
 {
     public class CollisionDamageEffect
     {

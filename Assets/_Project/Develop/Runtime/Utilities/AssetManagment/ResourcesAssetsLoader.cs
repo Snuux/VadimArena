@@ -1,7 +1,6 @@
-﻿using _Project.Develop.Runtime.Infrastructure.ConfigsManagment;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace _Project.Develop.Runtime.Infrastructure.AssetManagment
+namespace Assets._Project.Develop.Runtime.Utilities.AssetManagment
 {
     public class ResourcesAssetsLoader
     {

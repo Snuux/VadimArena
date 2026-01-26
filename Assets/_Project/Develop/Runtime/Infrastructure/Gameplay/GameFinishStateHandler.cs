@@ -1,6 +1,4 @@
-﻿using _Project.Develop.Runtime.Infrastructure.DI;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 
 namespace Assets._Project.Develop.Runtime.Infrastructure.Gameplay

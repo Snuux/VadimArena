@@ -2,7 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 
-namespace Arena.Scripts.UI
+namespace Assets.Arena.Scripts.UI
 {
     public class ConfirmPopup : MonoBehaviour
     {

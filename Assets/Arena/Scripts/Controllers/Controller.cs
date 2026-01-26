@@ -1,4 +1,4 @@
-namespace Arena.Scripts.Controllers
+namespace Assets.Arena.Scripts.Controllers
 {
     public abstract class Controller
     {

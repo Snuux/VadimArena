@@ -1,12 +1,12 @@
-﻿using _Project.Develop.Runtime.Infrastructure.AssetManagment;
-using _Project.Develop.Runtime.Infrastructure.ConfigsManagment;
-using _Project.Develop.Runtime.Infrastructure.CoroutineManagment;
-using _Project.Develop.Runtime.Infrastructure.DI;
-using _Project.Develop.Runtime.Utilities.LoadingScreen;
-using _Project.Develop.Runtime.Utilities.SceneManagment;
+﻿using Assets._Project.Develop.Runtime.Infrastructure.DI;
+using Assets._Project.Develop.Runtime.Utilities.AssetManagment;
+using Assets._Project.Develop.Runtime.Utilities.ConfigsManagment;
+using Assets._Project.Develop.Runtime.Utilities.CoroutineManagment;
+using Assets._Project.Develop.Runtime.Utilities.LoadingScreen;
+using Assets._Project.Develop.Runtime.Utilities.SceneManagment;
 using UnityEngine;
 
-namespace _Project.Develop.Runtime.Infrastructure.EntryPoint
+namespace Assets._Project.Develop.Runtime.Infrastructure.EntryPoint
 {
     public class ProjectContextRegistration
     {

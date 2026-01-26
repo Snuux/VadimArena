@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using Arena.Scripts.Configs;
+using Assets.Arena.Scripts.Configs;
 using UnityEngine;
 
-namespace Arena.Scripts.Infrastructure.Spawners
+namespace Assets.Arena.Scripts.Infrastructure.Spawners
 {
     public class SpawnEnemiesInSpawnPointsHandler
     {

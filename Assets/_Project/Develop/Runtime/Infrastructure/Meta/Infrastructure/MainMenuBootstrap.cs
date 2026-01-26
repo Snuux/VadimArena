@@ -1,20 +1,19 @@
-﻿using System;
+﻿using Assets._Project.Develop.Runtime.Configs;
+using Assets._Project.Develop.Runtime.Infrastructure.DI;
+using Assets._Project.Develop.Runtime.Utilities.Reactive;
+using Assets._Project.Develop.Runtime.Utilities.SceneManagment;
+using System;
 using System.Collections;
-using System.Collections.Generic;
-using _Project.Develop.Runtime.Infrastructure.ConfigsManagment;
-using _Project.Develop.Runtime.Infrastructure.CoroutineManagment;
-using _Project.Develop.Runtime.Infrastructure.DI;
-using _Project.Develop.Runtime.Utilities.SceneManagment;
-using Assets._Project.Develop.Runtime.Configs;
-using Assets._Project.Develop.Runtime.Infrastructure.Meta.Infrastructure;
-using Unity.VisualScripting;
 using UnityEngine;
 
-namespace _Project.Develop.Runtime.Infrastructure.Meta.Infrastructure
+namespace Assets._Project.Develop.Runtime.Infrastructure.Meta.Infrastructure
 {
-    public partial class MainMenuBootstrap : SceneBoostrap
+    public class MainMenuBootstrap : SceneBoostrap
     {
         private DIContainer _container;
+
+        private ReactiveVariable<int> _field;
+        private IDisposable _disposable;
 
         public override void ProcessRegistration(DIContainer container, IInputSceneArgs sceneArgs = null)
         {
@@ -33,7 +32,16 @@ namespace _Project.Develop.Runtime.Infrastructure.Meta.Infrastructure
         public override void Run()
         {
             Debug.Log("Start of meta scene");
-            Debug.Log("Enter 1 or 2 for load sequence with Letters or Digits:");
+
+            _field = new ReactiveVariable<int>(5);
+
+            _disposable = _field.Subscribe(OnFieldChanged);
+        }
+
+        private void OnFieldChanged(int arg1, int arg2)
+        {
+            Debug.Log($"Поле изменилось {arg1} - {arg2}");
+            _disposable.Dispose();
         }
 
         public void Update()
@@ -43,6 +51,11 @@ namespace _Project.Develop.Runtime.Infrastructure.Meta.Infrastructure
 
             if (Input.GetKeyDown(KeyCode.Alpha2))
                 _container.Resolve<ChangeSceneByLevelTypeService>().ChangeSceneBy(LevelTypes.Digits);
+
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                _field.Value++;
+            }
         }
     }
 }

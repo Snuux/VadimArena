@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Arena.Scripts.Game.Components
+namespace Assets.Arena.Scripts.Game.Components
 {
     public class DiceShootMover
     {

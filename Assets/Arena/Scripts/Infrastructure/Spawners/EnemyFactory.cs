@@ -1,10 +1,10 @@
-using Arena.Scripts.Configs;
-using Arena.Scripts.Controllers;
-using Arena.Scripts.Game;
-using Arena.Scripts.Infrastructure.GameCycle;
+using Assets.Arena.Scripts.Configs;
+using Assets.Arena.Scripts.Controllers;
+using Assets.Arena.Scripts.Game;
+using Assets.Arena.Scripts.Infrastructure.GameCycle;
 using UnityEngine;
 
-namespace Arena.Scripts.Infrastructure.Spawners
+namespace Assets.Arena.Scripts.Infrastructure.Spawners
 {
     public class EnemyFactory
     {

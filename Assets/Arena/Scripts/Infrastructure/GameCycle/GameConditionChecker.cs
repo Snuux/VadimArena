@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Arena.Scripts.Infrastructure.GameCycle
+namespace Assets.Arena.Scripts.Infrastructure.GameCycle
 {
     class GameConditionChecker
     {

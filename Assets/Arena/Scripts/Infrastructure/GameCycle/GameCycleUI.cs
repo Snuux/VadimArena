@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Arena.Scripts.Infrastructure.GameCycle
+namespace Assets.Arena.Scripts.Infrastructure.GameCycle
 {
     public class GameCycleUI
     {

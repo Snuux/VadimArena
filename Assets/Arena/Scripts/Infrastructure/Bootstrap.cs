@@ -1,14 +1,12 @@
-using System;
 using System.Collections;
-using Arena.Scripts.Configs;
-using Arena.Scripts.Game;
-using Arena.Scripts.Infrastructure.GameCycle;
-using Arena.Scripts.Infrastructure.GameCycle.Conditions;
-using Arena.Scripts.Infrastructure.Spawners;
-using Arena.Scripts.UI;
+using Assets.Arena.Scripts.Configs;
+using Assets.Arena.Scripts.Game;
+using Assets.Arena.Scripts.Infrastructure.GameCycle;
+using Assets.Arena.Scripts.Infrastructure.GameCycle.Conditions;
+using Assets.Arena.Scripts.Infrastructure.Spawners;
 using UnityEngine;
 
-namespace Arena.Scripts.Infrastructure
+namespace Assets.Arena.Scripts.Infrastructure
 {
     public class Bootstrap : MonoBehaviour
     {
