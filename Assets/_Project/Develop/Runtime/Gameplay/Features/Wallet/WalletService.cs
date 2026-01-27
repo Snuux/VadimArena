@@ -38,7 +38,7 @@ namespace Assets._Project.Develop.Runtime.Gameplay.Features.Wallet
 
         public void Spend(CurrencyTypes type, int amount)
         {
-            if (Enough(type, amount))
+            if (Enough(type, amount) == false)
                 throw new InvalidOperationException("Not enough " + type.ToString());
 
             if (amount < 0)

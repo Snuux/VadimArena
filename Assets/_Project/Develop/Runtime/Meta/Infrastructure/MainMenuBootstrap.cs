@@ -1,4 +1,5 @@
 ﻿using Assets._Project.Develop.Runtime.Configs;
+using Assets._Project.Develop.Runtime.Gameplay.Features.Wallet;
 using Assets._Project.Develop.Runtime.Infrastructure.DI;
 using Assets._Project.Develop.Runtime.Utilities.Reactive;
 using Assets._Project.Develop.Runtime.Utilities.SceneManagment;
@@ -15,6 +16,8 @@ namespace Assets._Project.Develop.Runtime.Infrastructure.Meta.Infrastructure
         private ReactiveVariable<int> _field;
         private IDisposable _disposable;
 
+        private WalletService _walletService;
+
         public override void ProcessRegistration(DIContainer container, IInputSceneArgs sceneArgs = null)
         {
             _container = container;
@@ -25,6 +28,7 @@ namespace Assets._Project.Develop.Runtime.Infrastructure.Meta.Infrastructure
         public override IEnumerator Initialize()
         {
             Debug.Log("Initialization of meta scene");
+            _walletService = _container.Resolve<WalletService>();
 
             yield break;
         }
@@ -55,6 +59,20 @@ namespace Assets._Project.Develop.Runtime.Infrastructure.Meta.Infrastructure
             if (Input.GetKeyDown(KeyCode.F))
             {
                 _field.Value++;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                _walletService.Add(CurrencyTypes.Gold, 10);
+                Debug.Log("Gold Remain: " + _walletService.GetCurrency(CurrencyTypes.Gold).Value);
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha4))
+            {
+                if (_walletService.Enough(CurrencyTypes.Gold, 5))
+                {
+                    _walletService.Spend(CurrencyTypes.Gold, 5);
+                    Debug.Log("Gold Remain: " + _walletService.GetCurrency(CurrencyTypes.Gold).Value);
+                }
             }
         }
     }
