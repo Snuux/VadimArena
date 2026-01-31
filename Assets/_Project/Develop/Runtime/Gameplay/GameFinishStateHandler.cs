@@ -18,7 +18,12 @@ namespace Assets._Project.Develop.Runtime.Infrastructure.Gameplay
 
         public void SetState(GameFinishState state) => _gameFinishState = state;
 
-        public void SetStateBySequenceEquality(string inputSymbols, int targetLength, Predicate<string> isSameSequence)
+        public void SetStateBySequenceEquality(
+            string inputSymbols,
+            string sourceSequence,
+            int targetLength,
+            Func<string, string, bool> isSameSequence
+        )
         {
             if (inputSymbols.Length > targetLength)
                 SetState(GameFinishState.Defeat);
@@ -26,7 +31,7 @@ namespace Assets._Project.Develop.Runtime.Infrastructure.Gameplay
             if (inputSymbols.Length < targetLength)
                 return;
 
-            if (isSameSequence.Invoke(inputSymbols))
+            if (isSameSequence.Invoke(inputSymbols, sourceSequence))
                 SetState(GameFinishState.Win);
             else
                 SetState(GameFinishState.Defeat);

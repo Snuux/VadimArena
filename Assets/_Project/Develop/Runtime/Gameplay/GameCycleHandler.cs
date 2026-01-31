@@ -9,34 +9,36 @@ namespace Assets._Project.Develop.Runtime.Infrastructure.Gameplay
 {
     public class GameCycleHandler
     {
-        private RandomSymbolsSequenceService _randomSymbolsSequenceService;
+        private RandomSymbolsSequenceGenerationService _randomSymbolsSequenceGenerationService;
+        private SequenceCheckService _sequenceCheckService;
         private GameFinishStateHandler _gameFinishStateHandler;
         private InputSequenceHandler _inputSequenceHandler;
         private ICoroutinesPerformer _coroutinesPerformer;
         private SceneSwitcherService _sceneSwitcherService;
 
         public GameCycleHandler(
-            RandomSymbolsSequenceService randomSymbolsSequenceService, 
+            RandomSymbolsSequenceGenerationService randomSymbolsSequenceGenerationService, 
             GameFinishStateHandler gameFinishStateHandler, 
             InputSequenceHandler inputSequenceHandler, 
             ICoroutinesPerformer coroutinesPerformer, 
-            SceneSwitcherService sceneSwitcherService)
+            SceneSwitcherService sceneSwitcherService,
+            SequenceCheckService sequenceCheckService)
         {
-            _randomSymbolsSequenceService = randomSymbolsSequenceService;
+            _randomSymbolsSequenceGenerationService = randomSymbolsSequenceGenerationService;
             _gameFinishStateHandler = gameFinishStateHandler;
             _inputSequenceHandler = inputSequenceHandler;
             _coroutinesPerformer = coroutinesPerformer;
             _sceneSwitcherService = sceneSwitcherService;
+            _sequenceCheckService = sequenceCheckService;
         }
 
         public void Run()
         {
-            _randomSymbolsSequenceService.GenerateSequence();
+            _randomSymbolsSequenceGenerationService.GenerateSequence();
             _inputSequenceHandler.Clear();
 
-            Debug.Log("Generated Sequence:" + _randomSymbolsSequenceService.RandomSequence);
+            Debug.Log("Generated Sequence:" + _randomSymbolsSequenceGenerationService.Sequence);
             Debug.Log("Repeat it:");
-
         }
 
         public void Update(float deltaTime)
@@ -47,8 +49,9 @@ namespace Assets._Project.Develop.Runtime.Infrastructure.Gameplay
 
                 _gameFinishStateHandler.SetStateBySequenceEquality(
                     _inputSequenceHandler.InputSymbols,
-                    _randomSymbolsSequenceService.Length,
-                    _randomSymbolsSequenceService.IsSameSequence);
+                    _randomSymbolsSequenceGenerationService.Sequence,
+                    _randomSymbolsSequenceGenerationService.Length,
+                    _sequenceCheckService.IsSame);
 
                 _gameFinishStateHandler.PrintState();
             }

@@ -19,21 +19,23 @@ namespace _Project.Develop.Runtime.Infrastructure.Gameplay.Infrastructure
             container.RegisterAsSingle(CreateGameCycle);
             container.RegisterAsSingle(CreateGameFinishStateHandler);
             container.RegisterAsSingle(CreateInputSequenceHandler);
+            container.RegisterAsSingle(CreateSequenceCheckService);
         }
 
-        private static RandomSymbolsSequenceService CreateRandomSymbolsSequenceService(DIContainer c, GameplayInputArgs args)
+        private static RandomSymbolsSequenceGenerationService CreateRandomSymbolsSequenceService(DIContainer c, GameplayInputArgs args)
         {
-            return new RandomSymbolsSequenceService(args.Length, args.Symbols);
+            return new RandomSymbolsSequenceGenerationService(args.Length, args.Symbols);
         }
 
         private static GameCycleHandler CreateGameCycle(DIContainer c)
         {
             return new GameCycleHandler(
-                c.Resolve<RandomSymbolsSequenceService>(),
+                c.Resolve<RandomSymbolsSequenceGenerationService>(),
                 c.Resolve<GameFinishStateHandler>(),
                 c.Resolve<InputSequenceHandler>(),
                 c.Resolve<ICoroutinesPerformer>(),
-                c.Resolve<SceneSwitcherService>()
+                c.Resolve<SceneSwitcherService>(),
+                c.Resolve<SequenceCheckService>()
                 );
         }
 
@@ -45,6 +47,11 @@ namespace _Project.Develop.Runtime.Infrastructure.Gameplay.Infrastructure
         private static InputSequenceHandler CreateInputSequenceHandler(DIContainer c)
         {
             return new InputSequenceHandler();
+        }
+        
+        private static SequenceCheckService CreateSequenceCheckService(DIContainer c)
+        {
+            return new SequenceCheckService();
         }
     }
 }
