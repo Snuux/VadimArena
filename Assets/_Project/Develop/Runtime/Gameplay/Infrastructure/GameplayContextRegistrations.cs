@@ -1,9 +1,10 @@
-﻿using Assets._Project.Develop.Runtime.Infrastructure.DI;
-using Assets._Project.Develop.Runtime.Utilities.CoroutineManagment;
-using Assets._Project.Develop.Runtime.Utilities.SceneManagment;
+﻿using _Project.Develop.Runtime.Gameplay.Features.GameCycle;
+using _Project.Develop.Runtime.Infrastructure.DI;
+using _Project.Develop.Runtime.Utilities.CoroutineManagment;
+using _Project.Develop.Runtime.Utilities.SceneManagment;
 using UnityEngine;
 
-namespace Assets._Project.Develop.Runtime.Infrastructure.Gameplay.Infrastructure
+namespace _Project.Develop.Runtime.Gameplay.Infrastructure
 {
     public class GameplayContextRegistrations
     {

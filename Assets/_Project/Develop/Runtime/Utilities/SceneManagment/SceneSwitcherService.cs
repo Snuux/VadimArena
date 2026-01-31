@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections;
-using Assets._Project.Develop.Runtime.Infrastructure;
-using Assets._Project.Develop.Runtime.Infrastructure.DI;
-using Assets._Project.Develop.Runtime.Utilities.LoadingScreen;
+using _Project.Develop.Runtime.Infrastructure;
+using _Project.Develop.Runtime.Infrastructure.DI;
+using _Project.Develop.Runtime.Utilities.LoadingScreen;
 using Object = UnityEngine.Object;
 
-namespace Assets._Project.Develop.Runtime.Utilities.SceneManagment
+namespace _Project.Develop.Runtime.Utilities.SceneManagment
 {
     public class SceneSwitcherService
     {

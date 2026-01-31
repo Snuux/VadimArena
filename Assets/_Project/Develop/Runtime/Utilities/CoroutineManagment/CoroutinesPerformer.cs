@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-namespace Assets._Project.Develop.Runtime.Utilities.CoroutineManagment
+namespace _Project.Develop.Runtime.Utilities.CoroutineManagment
 {
     public class CoroutinesPerformer : MonoBehaviour, ICoroutinesPerformer
     {

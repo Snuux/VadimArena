@@ -1,7 +1,7 @@
-using Assets._Project.Develop.Runtime.Gameplay.Features.Wallet;
 using System.Collections.Generic;
+using _Project.Develop.Runtime.Gameplay.Features.Wallet;
 
-namespace Assets._Project.Develop.Runtime.Utilities.DataManagment
+namespace _Project.Develop.Runtime.Utilities.DataManagment
 {
     public class PlayerData
     {

@@ -1,7 +1,6 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Assets._Project.Develop.Runtime.Utilities.LoadingScreen
+namespace _Project.Develop.Runtime.Utilities.LoadingScreen
 {
     public class StandardLoadingScreen : MonoBehaviour, ILoadingScreen
     {

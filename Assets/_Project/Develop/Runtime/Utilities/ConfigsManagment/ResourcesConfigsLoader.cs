@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using Assets._Project.Develop.Runtime.Configs;
-using Assets._Project.Develop.Runtime.Utilities.AssetManagment;
+using _Project.Develop.Runtime.Configs;
+using _Project.Develop.Runtime.Utilities.AssetManagment;
 using UnityEngine;
 
-namespace Assets._Project.Develop.Runtime.Utilities.ConfigsManagment
+namespace _Project.Develop.Runtime.Utilities.ConfigsManagment
 {
     public class ResourcesConfigsLoader : IConfigsLoader
     {

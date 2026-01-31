@@ -1,9 +1,9 @@
-using Assets._Project.Develop.Runtime.Utilities.Reactive;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using _Project.Develop.Runtime.Utilities.Reactive;
 
-namespace Assets._Project.Develop.Runtime.Gameplay.Features.Wallet
+namespace _Project.Develop.Runtime.Gameplay.Features.Wallet
 {
         public class WalletService
         {

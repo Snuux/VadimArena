@@ -1,19 +1,18 @@
-﻿using Assets._Project.Develop.Runtime.Gameplay.Features.Wallet;
-using Assets._Project.Develop.Runtime.Infrastructure.DI;
-using Assets._Project.Develop.Runtime.Utilities.AssetManagment;
-using Assets._Project.Develop.Runtime.Utilities.ConfigsManagment;
-using Assets._Project.Develop.Runtime.Utilities.CoroutineManagment;
-using Assets._Project.Develop.Runtime.Utilities.LoadingScreen;
-using Assets._Project.Develop.Runtime.Utilities.Reactive;
-using Assets._Project.Develop.Runtime.Utilities.SceneManagment;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using UnityEngine;
+using _Project.Develop.Runtime.Gameplay.Features.Wallet;
+using _Project.Develop.Runtime.Infrastructure.DI;
+using _Project.Develop.Runtime.Utilities.AssetManagment;
+using _Project.Develop.Runtime.Utilities.ConfigsManagment;
+using _Project.Develop.Runtime.Utilities.CoroutineManagment;
+using _Project.Develop.Runtime.Utilities.LoadingScreen;
+using _Project.Develop.Runtime.Utilities.Reactive;
+using _Project.Develop.Runtime.Utilities.SceneManagment;
 using Object = UnityEngine.Object;
 
 
 
-namespace Assets._Project.Develop.Runtime.Infrastructure.EntryPoint
+namespace _Project.Develop.Runtime.Infrastructure.EntryPoint
 {
     public class ProjectContextRegistration
     {

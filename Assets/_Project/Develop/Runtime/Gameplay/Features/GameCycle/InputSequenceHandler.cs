@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Assets._Project.Develop.Runtime.Infrastructure.Gameplay
+namespace _Project.Develop.Runtime.Gameplay.Features.GameCycle
 {
     public class InputSequenceHandler
     {

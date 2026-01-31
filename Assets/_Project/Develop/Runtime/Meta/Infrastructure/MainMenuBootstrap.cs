@@ -1,13 +1,14 @@
-﻿using Assets._Project.Develop.Runtime.Configs;
-using Assets._Project.Develop.Runtime.Gameplay.Features.Wallet;
-using Assets._Project.Develop.Runtime.Infrastructure.DI;
-using Assets._Project.Develop.Runtime.Utilities.Reactive;
-using Assets._Project.Develop.Runtime.Utilities.SceneManagment;
-using System;
+﻿using System;
 using System.Collections;
+using _Project.Develop.Runtime.Configs;
+using _Project.Develop.Runtime.Gameplay.Features.Wallet;
+using _Project.Develop.Runtime.Infrastructure;
+using _Project.Develop.Runtime.Infrastructure.DI;
+using _Project.Develop.Runtime.Utilities.Reactive;
+using _Project.Develop.Runtime.Utilities.SceneManagment;
 using UnityEngine;
 
-namespace Assets._Project.Develop.Runtime.Infrastructure.Meta.Infrastructure
+namespace _Project.Develop.Runtime.Meta.Infrastructure
 {
     public class MainMenuBootstrap : SceneBoostrap
     {
