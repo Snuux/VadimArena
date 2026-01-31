@@ -17,10 +17,10 @@ namespace Assets._Project.Develop.Runtime.Infrastructure.Gameplay
         private SceneSwitcherService _sceneSwitcherService;
 
         public GameCycleHandler(
-            RandomSymbolsSequenceGenerationService randomSymbolsSequenceGenerationService, 
-            GameFinishStateHandler gameFinishStateHandler, 
-            InputSequenceHandler inputSequenceHandler, 
-            ICoroutinesPerformer coroutinesPerformer, 
+            RandomSymbolsSequenceGenerationService randomSymbolsSequenceGenerationService,
+            GameFinishStateHandler gameFinishStateHandler,
+            InputSequenceHandler inputSequenceHandler,
+            ICoroutinesPerformer coroutinesPerformer,
             SceneSwitcherService sceneSwitcherService,
             SequenceCheckService sequenceCheckService)
         {
@@ -45,15 +45,9 @@ namespace Assets._Project.Develop.Runtime.Infrastructure.Gameplay
         {
             if (_gameFinishStateHandler.State == GameFinishState.Running)
             {
-                _inputSequenceHandler.ProcessInputKeys();
-
-                _gameFinishStateHandler.SetStateBySequenceEquality(
-                    _inputSequenceHandler.InputSymbols,
-                    _randomSymbolsSequenceGenerationService.Sequence,
-                    _randomSymbolsSequenceGenerationService.Length,
-                    _sequenceCheckService.IsSame);
-
-                _gameFinishStateHandler.PrintState();
+                ProcessInput();
+                ProcessState();
+                PrintEndMessage();
             }
             else
             {
@@ -62,9 +56,22 @@ namespace Assets._Project.Develop.Runtime.Infrastructure.Gameplay
             }
         }
 
-        private void SwitchSceneTo(string sceneName)
+        private void ProcessState() =>
+            _gameFinishStateHandler.SetStateBySequenceEquality(
+                _inputSequenceHandler.InputSymbols,
+                _randomSymbolsSequenceGenerationService.Sequence,
+                _randomSymbolsSequenceGenerationService.Length,
+                _sequenceCheckService.IsSame);
+
+        private void ProcessInput() => _inputSequenceHandler.ProcessInputKeys();
+
+        private void PrintEndMessage()
         {
-            _coroutinesPerformer.StartPerform(_sceneSwitcherService.ProcessSwitchTo(sceneName));
+            if (_gameFinishStateHandler.State != GameFinishState.Running)
+                Debug.Log(_gameFinishStateHandler.GetStateAsString() + GameFinishStateHandler.EndMessage);
         }
+
+        private void SwitchSceneTo(string sceneName)
+            => _coroutinesPerformer.StartPerform(_sceneSwitcherService.ProcessSwitchTo(sceneName));
     }
 }

@@ -7,6 +7,8 @@ namespace Assets._Project.Develop.Runtime.Infrastructure.Gameplay
 {
     public class GameFinishStateHandler
     {
+        public const string EndMessage = " Press 'Space' to return to main menu";
+        
         private GameFinishState _gameFinishState;
 
         public GameFinishStateHandler()
@@ -37,17 +39,6 @@ namespace Assets._Project.Develop.Runtime.Infrastructure.Gameplay
                 SetState(GameFinishState.Defeat);
         }
 
-        public void PrintState()
-        {
-            switch (State)
-            {
-                case GameFinishState.Win:
-                    Debug.Log("Win! Press 'Space' to return to main menu");
-                    break;
-                case GameFinishState.Defeat:
-                    Debug.Log("Defeat! Press 'Space' to return to main menu");
-                    break;
-            }
-        }
+        public string GetStateAsString() => _gameFinishState.ToString();
     }
 }
