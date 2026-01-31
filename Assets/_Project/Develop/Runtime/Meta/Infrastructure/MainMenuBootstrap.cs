@@ -16,6 +16,8 @@ namespace _Project.Develop.Runtime.Infrastructure.Meta.Infrastructure
     {
         private DIContainer _container;
         private ChangeSceneByLevelTypeService _changeSceneByLevelTypeService;
+        
+        private bool _running;
 
         public override void ProcessRegistration(DIContainer container, IInputSceneArgs sceneArgs = null)
         {
@@ -37,11 +39,14 @@ namespace _Project.Develop.Runtime.Infrastructure.Meta.Infrastructure
         {
             Debug.Log("Start of meta scene");
             Debug.Log("Enter 1 or 2 for load sequence with Letters or Digits:");
+
+            _running = true;
         }
 
         public void Update()
         {
-            _changeSceneByLevelTypeService.Update(Time.deltaTime);
+            if (_running)
+                _changeSceneByLevelTypeService.Update(Time.deltaTime);
         }
     }
 }
