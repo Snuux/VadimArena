@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using _Project.Develop.Runtime.Configs;
+using _Project.Develop.Runtime.DataManagment;
+using _Project.Develop.Runtime.DataManagment.Serializers;
 using _Project.Develop.Runtime.Gameplay.Features.Wallet;
 using _Project.Develop.Runtime.Infrastructure;
 using _Project.Develop.Runtime.Infrastructure.DI;
@@ -19,6 +22,10 @@ namespace _Project.Develop.Runtime.Meta.Infrastructure
 
         private WalletService _walletService;
 
+        private PlayerData _playerData;
+        private IDataSerializer _serializer;
+        private string _serializedPlayerData;
+
         public override void ProcessRegistration(DIContainer container, IInputSceneArgs sceneArgs = null)
         {
             _container = container;
@@ -30,6 +37,15 @@ namespace _Project.Develop.Runtime.Meta.Infrastructure
         {
             Debug.Log("Initialization of meta scene");
             _walletService = _container.Resolve<WalletService>();
+            _playerData = new PlayerData();
+            _playerData.WalletData = new Dictionary<CurrencyTypes, int>
+            {
+                { CurrencyTypes.Gold, 10 },
+                { CurrencyTypes.Diamond, 5 }
+            };
+
+            _serializer = new JsonSerializer();
+
 
             yield break;
         }
@@ -67,6 +83,7 @@ namespace _Project.Develop.Runtime.Meta.Infrastructure
                 _walletService.Add(CurrencyTypes.Gold, 10);
                 Debug.Log("Gold Remain: " + _walletService.GetCurrency(CurrencyTypes.Gold).Value);
             }
+
             if (Input.GetKeyDown(KeyCode.Alpha4))
             {
                 if (_walletService.Enough(CurrencyTypes.Gold, 5))
@@ -74,6 +91,21 @@ namespace _Project.Develop.Runtime.Meta.Infrastructure
                     _walletService.Spend(CurrencyTypes.Gold, 5);
                     Debug.Log("Gold Remain: " + _walletService.GetCurrency(CurrencyTypes.Gold).Value);
                 }
+            }
+
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                _serializedPlayerData = _serializer.Serialize(_playerData);
+                Debug.Log(_serializedPlayerData);
+            }
+
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                _playerData.WalletData = null;
+                _playerData = _serializer.Deserialize<PlayerData>(_serializedPlayerData);
+
+                Debug.Log("Gold : " + _playerData.WalletData[CurrencyTypes.Gold]);
+                Debug.Log("Diamond : " + _playerData.WalletData[CurrencyTypes.Diamond]);
             }
         }
     }
