@@ -11,23 +11,19 @@ namespace _Project.Develop.Runtime.Infrastructure.Gameplay.Infrastructure
 {
     public class GameplayContextRegistrations
     {
-        private static GameplayInputArgs _args;
-
         public static void Process(DIContainer container, GameplayInputArgs args)
         {
-            _args = args;
-
             Debug.Log("Process of services registration in gameplay scene");
 
-            container.RegisterAsSingle(CreateRandomSymbolsSequenceService);
+            container.RegisterAsSingle(c => CreateRandomSymbolsSequenceService(c, args));
             container.RegisterAsSingle(CreateGameCycle);
             container.RegisterAsSingle(CreateGameFinishStateHandler);
             container.RegisterAsSingle(CreateInputSequenceHandler);
         }
 
-        private static RandomSymbolsSequenceService CreateRandomSymbolsSequenceService(DIContainer c)
+        private static RandomSymbolsSequenceService CreateRandomSymbolsSequenceService(DIContainer c, GameplayInputArgs args)
         {
-            return new RandomSymbolsSequenceService(_args.Length, _args.Symbols);
+            return new RandomSymbolsSequenceService(args.Length, args.Symbols);
         }
 
         private static GameCycleHandler CreateGameCycle(DIContainer c)
