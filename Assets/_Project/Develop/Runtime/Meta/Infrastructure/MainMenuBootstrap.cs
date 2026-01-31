@@ -15,6 +15,7 @@ namespace _Project.Develop.Runtime.Infrastructure.Meta.Infrastructure
     public partial class MainMenuBootstrap : SceneBoostrap
     {
         private DIContainer _container;
+        private ChangeSceneByLevelTypeService _changeSceneByLevelTypeService;
 
         public override void ProcessRegistration(DIContainer container, IInputSceneArgs sceneArgs = null)
         {
@@ -27,6 +28,8 @@ namespace _Project.Develop.Runtime.Infrastructure.Meta.Infrastructure
         {
             Debug.Log("Initialization of meta scene");
 
+            _changeSceneByLevelTypeService = _container.Resolve<ChangeSceneByLevelTypeService>();
+
             yield break;
         }
 
@@ -38,11 +41,7 @@ namespace _Project.Develop.Runtime.Infrastructure.Meta.Infrastructure
 
         public void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Alpha1))
-                _container.Resolve<ChangeSceneByLevelTypeService>().ChangeSceneBy(LevelTypes.Letters);
-
-            if (Input.GetKeyDown(KeyCode.Alpha2))
-                _container.Resolve<ChangeSceneByLevelTypeService>().ChangeSceneBy(LevelTypes.Digits);
+            _changeSceneByLevelTypeService.Update(Time.deltaTime);
         }
     }
 }

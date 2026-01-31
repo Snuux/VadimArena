@@ -20,9 +20,13 @@ namespace _Project.Develop.Runtime.Infrastructure.Meta.Infrastructure
             _coroutinesPerformer = coroutinesPerformer;
         }
 
-        public void Update(Action<float> updateFunc, float deltaTime)
+        public void Update(float deltaTime)
         {
-            
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+                ChangeSceneBy(LevelTypes.Letters);
+
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+                ChangeSceneBy(LevelTypes.Digits);
         }
 
         public void ChangeSceneBy(LevelTypes type)
