@@ -73,7 +73,4 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
-/Packages/com.mibdev.fullscreen-editor
-/Assets/Plugins
-/Assets/Plugins.meta
 /.idea
