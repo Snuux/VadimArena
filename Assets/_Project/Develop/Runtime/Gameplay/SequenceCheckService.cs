@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Assets._Project.Develop.Runtime.Infrastructure.Gameplay
+namespace _Project.Develop.Runtime.Gameplay
 {
     public class SequenceCheckService
     {

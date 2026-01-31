@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using _Project.Develop.Runtime.Infrastructure.ConfigsManagment;
-using _Project.Develop.Runtime.Infrastructure.CoroutineManagment;
+﻿using System.Collections;
+using _Project.Develop.Runtime.Infrastructure;
 using _Project.Develop.Runtime.Infrastructure.DI;
 using _Project.Develop.Runtime.Utilities.SceneManagment;
-using Assets._Project.Develop.Runtime.Configs;
-using Assets._Project.Develop.Runtime.Infrastructure.Meta.Infrastructure;
-using Unity.VisualScripting;
 using UnityEngine;
 
-namespace _Project.Develop.Runtime.Infrastructure.Meta.Infrastructure
+namespace _Project.Develop.Runtime.Meta.Infrastructure
 {
     public partial class MainMenuBootstrap : SceneBoostrap
     {

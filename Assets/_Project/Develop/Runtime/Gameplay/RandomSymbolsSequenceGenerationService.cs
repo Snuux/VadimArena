@@ -1,8 +1,6 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
-using Random = UnityEngine.Random;
+﻿using Random = UnityEngine.Random;
 
-namespace Assets._Project.Develop.Runtime.Infrastructure.Gameplay
+namespace _Project.Develop.Runtime.Gameplay
 {
     public class RandomSymbolsSequenceGenerationService
     {

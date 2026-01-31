@@ -1,9 +1,6 @@
-﻿using _Project.Develop.Runtime.Infrastructure.DI;
-using System;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System;
 
-namespace Assets._Project.Develop.Runtime.Infrastructure.Gameplay
+namespace _Project.Develop.Runtime.Gameplay
 {
     public class GameFinishStateHandler
     {

@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections;
-using _Project.Develop.Runtime.Infrastructure.CoroutineManagment;
+using _Project.Develop.Runtime.Infrastructure;
 using _Project.Develop.Runtime.Infrastructure.DI;
 using _Project.Develop.Runtime.Utilities.SceneManagment;
-using Assets._Project.Develop.Runtime.Infrastructure.Gameplay;
 using UnityEngine;
 
-namespace _Project.Develop.Runtime.Infrastructure.Gameplay.Infrastructure
+namespace _Project.Develop.Runtime.Gameplay.Infrastructure
 {
     public class GameplayBootstrap : SceneBoostrap
     {

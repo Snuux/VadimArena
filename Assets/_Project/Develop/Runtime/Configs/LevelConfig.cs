@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Assets._Project.Develop.Runtime.Configs   
+namespace _Project.Develop.Runtime.Configs   
 {
     [CreateAssetMenu(menuName = "Configs/Gameplay/LevelConfig", fileName = "LevelConfig")]
     public class LevelConfig : ScriptableObject

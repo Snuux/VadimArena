@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 
-namespace _Project.Develop.Runtime.Infrastructure.ConfigsManagment
+namespace _Project.Develop.Runtime.Utilities.ConfigsManagment
 {
     public class ConfigsProviderService
     {

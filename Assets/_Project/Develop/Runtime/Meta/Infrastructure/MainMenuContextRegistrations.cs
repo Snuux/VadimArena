@@ -1,11 +1,10 @@
-﻿using _Project.Develop.Runtime.Infrastructure.ConfigsManagment;
-using _Project.Develop.Runtime.Infrastructure.CoroutineManagment;
-using _Project.Develop.Runtime.Infrastructure.DI;
-using _Project.Develop.Runtime.Infrastructure.Meta.Infrastructure;
+﻿using _Project.Develop.Runtime.Infrastructure.DI;
+using _Project.Develop.Runtime.Utilities.ConfigsManagment;
+using _Project.Develop.Runtime.Utilities.CoroutineManagment;
 using _Project.Develop.Runtime.Utilities.SceneManagment;
 using UnityEngine;
 
-namespace Assets._Project.Develop.Runtime.Infrastructure.Meta.Infrastructure
+namespace _Project.Develop.Runtime.Meta.Infrastructure
 {
     public class MainMenuContextRegistrations
     {

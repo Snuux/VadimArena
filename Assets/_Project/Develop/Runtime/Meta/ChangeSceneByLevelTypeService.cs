@@ -1,11 +1,11 @@
-﻿using System;
-using _Project.Develop.Runtime.Infrastructure.ConfigsManagment;
-using _Project.Develop.Runtime.Infrastructure.CoroutineManagment;
+﻿using _Project.Develop.Runtime.Configs;
+using _Project.Develop.Runtime.Gameplay.Infrastructure;
+using _Project.Develop.Runtime.Utilities.ConfigsManagment;
+using _Project.Develop.Runtime.Utilities.CoroutineManagment;
 using _Project.Develop.Runtime.Utilities.SceneManagment;
-using Assets._Project.Develop.Runtime.Configs;
 using UnityEngine;
 
-namespace _Project.Develop.Runtime.Infrastructure.Meta.Infrastructure
+namespace _Project.Develop.Runtime.Meta
 {
     class ChangeSceneByLevelTypeService
     {
