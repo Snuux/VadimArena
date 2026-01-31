@@ -57,7 +57,7 @@ namespace Assets._Project.Develop.Runtime.Infrastructure.Gameplay
         }
 
         private void ProcessState() =>
-            _gameFinishStateHandler.SetStateBySequenceEquality(
+            _gameFinishStateHandler.SetStateBy(
                 _inputSequenceHandler.InputSymbols,
                 _randomSymbolsSequenceGenerationService.Sequence,
                 _randomSymbolsSequenceGenerationService.Length,

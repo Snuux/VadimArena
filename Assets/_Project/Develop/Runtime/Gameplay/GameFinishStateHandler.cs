@@ -20,7 +20,7 @@ namespace Assets._Project.Develop.Runtime.Infrastructure.Gameplay
 
         public void SetState(GameFinishState state) => _gameFinishState = state;
 
-        public void SetStateBySequenceEquality(
+        public void SetStateBy(
             string inputSymbols,
             string sourceSequence,
             int targetLength,
