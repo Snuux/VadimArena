@@ -3,10 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using _Project.Develop.Runtime.Configs;
 using _Project.Develop.Runtime.DataManagment;
+using _Project.Develop.Runtime.DataManagment.DataProviders;
 using _Project.Develop.Runtime.DataManagment.Serializers;
 using _Project.Develop.Runtime.Gameplay.Features.Wallet;
 using _Project.Develop.Runtime.Infrastructure;
 using _Project.Develop.Runtime.Infrastructure.DI;
+using _Project.Develop.Runtime.Utilities.CoroutineManagment;
 using _Project.Develop.Runtime.Utilities.Reactive;
 using _Project.Develop.Runtime.Utilities.SceneManagment;
 using UnityEngine;
@@ -22,9 +24,8 @@ namespace _Project.Develop.Runtime.Meta.Infrastructure
 
         private WalletService _walletService;
 
-        private PlayerData _playerData;
-        private IDataSerializer _serializer;
-        private string _serializedPlayerData;
+        private PlayerDataProvider _playerDataProvider;
+        private ICoroutinesPerformer _coroutinesPerformer;
 
         public override void ProcessRegistration(DIContainer container, IInputSceneArgs sceneArgs = null)
         {
@@ -37,16 +38,10 @@ namespace _Project.Develop.Runtime.Meta.Infrastructure
         {
             Debug.Log("Initialization of meta scene");
             _walletService = _container.Resolve<WalletService>();
-            _playerData = new PlayerData();
-            _playerData.WalletData = new Dictionary<CurrencyTypes, int>
-            {
-                { CurrencyTypes.Gold, 10 },
-                { CurrencyTypes.Diamond, 5 }
-            };
-
-            _serializer = new JsonSerializer();
-
-
+            
+            _playerDataProvider = _container.Resolve<PlayerDataProvider>();
+            _coroutinesPerformer = _container.Resolve<ICoroutinesPerformer>();
+            
             yield break;
         }
 
@@ -95,18 +90,20 @@ namespace _Project.Develop.Runtime.Meta.Infrastructure
 
             if (Input.GetKeyDown(KeyCode.S))
             {
-                _serializedPlayerData = _serializer.Serialize(_playerData);
-                Debug.Log(_serializedPlayerData);
-            }
-
-            if (Input.GetKeyDown(KeyCode.A))
-            {
-                _playerData.WalletData = null;
-                _playerData = _serializer.Deserialize<PlayerData>(_serializedPlayerData);
-
-                Debug.Log("Gold : " + _playerData.WalletData[CurrencyTypes.Gold]);
-                Debug.Log("Diamond : " + _playerData.WalletData[CurrencyTypes.Diamond]);
+                _coroutinesPerformer.StartPerform(_playerDataProvider.Save());
+                Debug.Log("Save triggered!");
+                //Debug.Log("Gold : " + _playerData.WalletData[CurrencyTypes.Gold]);
+                //Debug.Log("Diamond : " + _playerData.WalletData[CurrencyTypes.Diamond]);
             }
         }
+
+        /*private IEnumerator LoadPlayerData()
+        {
+            PlayerData loadedPlayerData =  null;
+            yield return _saveLoadService.Load<PlayerData>(data => loadedPlayerData = data);
+            
+            Debug.Log($"Save triggered! Loaded data Gold: " + loadedPlayerData.WalletData[CurrencyTypes.Gold]);
+            Debug.Log($"Loaded data Diamonds: " + loadedPlayerData.WalletData[CurrencyTypes.Diamond]);
+        }*/
     }
 }
